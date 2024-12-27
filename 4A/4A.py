@@ -1,9 +1,8 @@
 import sys
 
-with open(sys.argv[1], 'r') as file:
-    for line in file:
-        line = int(line.strip())
-        if line % 2 == 0:
-            print("YES")
-        else:
-            print("NO")
+for line in sys.stdin:
+    line = int(line.strip())  # Convert each line to an integer
+    if line % 2 == 0 and line > 2:
+        print("YES")
+    else:
+        print("NO")
